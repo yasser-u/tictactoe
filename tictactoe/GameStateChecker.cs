@@ -12,7 +12,7 @@ namespace TicTacToe
         /// <param name="playerOne">The first player.</param>
         /// <param name="playerTwo">The second player.</param>
         /// <returns><c>true</c> if there is a winning condition; otherwise, <c>false</c>.</returns>
-        public static bool IsGameBoardWin(List<Cell> grid, Player playerOne, Player playerTwo)
+        public static bool IsGameBoardWin(List<Cell> grid, IPlayer playerOne, IPlayer playerTwo)
         {
             IEnumerable<IGrouping<int, Cell>> rows = grid.GroupBy(cell => cell.Row);
 
@@ -67,7 +67,7 @@ namespace TicTacToe
         /// <param name="playerOne">The first player.</param>
         /// <param name="playerTwo">The second player.</param>
         /// <returns><c>true</c> if the game has ended; otherwise, <c>false</c>.</returns>
-        public static bool CheckGameEnd(List<Cell> grid, Player currentPlayer, Player playerOne, Player playerTwo)
+        public static bool CheckGameEnd(List<Cell> grid, IPlayer currentPlayer, IPlayer playerOne, IPlayer playerTwo)
         {
             if (IsGameBoardWin(grid, playerOne, playerTwo))
             {

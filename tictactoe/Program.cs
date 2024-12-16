@@ -1,8 +1,9 @@
-internal class Program
+class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Game game = new Game();
+        string mode = Game.SelectGameMode();
+        Game game = new Game(mode);
         game.Start();
     }
 }

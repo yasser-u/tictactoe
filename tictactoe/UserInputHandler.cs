@@ -12,7 +12,7 @@ namespace TicTacToe
         /// <param name="targetRow">The target row for the next move.</param>
         /// <param name="targetColumn">The target column for the next move.</param>
         /// <returns><c>true</c> if the input is valid; otherwise, <c>false</c>.</returns>
-        public static bool TryGetUserInput(Player currentPlayer, out int targetRow, out int targetColumn)
+        public static bool TryGetUserInput(IPlayer currentPlayer, out int targetRow, out int targetColumn)
         {
             targetRow = 0;
             targetColumn = 0;

@@ -3,7 +3,7 @@ namespace TicTacToe
     /// <summary>
     /// Represents a player in the Tic Tac Toe game.
     /// </summary>
-    internal class Player
+    internal class Player : IPlayer
     {
         /// <summary>
         /// Gets the symbol of the player.
